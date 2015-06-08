@@ -37,7 +37,10 @@ public class PlayerMovement : MonoBehaviour {
 
         float inputH = Input.GetAxis("Horizontal");
         GetComponent<Rigidbody2D>().AddForce(gameObject.transform.right * speed * inputH);
+    }
 
+    void Update()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("MeleeAttackTrigger");
