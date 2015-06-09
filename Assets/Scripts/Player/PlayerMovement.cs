@@ -20,23 +20,44 @@ public class PlayerMovement : MonoBehaviour {
 
         transform.rotation = rot;
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+
+        Vector3 CurrentRotation = transform.rotation.eulerAngles;
+
         GetComponent<Rigidbody2D>().angularVelocity = 0;
 
         float inputV = Input.GetAxis("Vertical");
-        if(inputV > 0)
+        if((inputV > 0) || (inputV < 0))
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed * inputV);
 
-            anim.SetBool("ForwardMovement", true);
+            if ((CurrentRotation.z >= 330) || (CurrentRotation.z <= 30))
+            {
+                anim.SetBool("ForwardMovement", true);
+            }
+            else if ((CurrentRotation.z >= 150) && (CurrentRotation.z <= 210))
+                 {
+                    anim.SetBool("ForwardMovement", true);
+                 }
+                else if ((CurrentRotation.z > 30) && (CurrentRotation.z < 150))
+                    {
+                        anim.SetBool("ForwardMovement", true);
+  
+                    }
+                    else if ((CurrentRotation.z > 210) && (CurrentRotation.z < 330))
+                        {
+                            anim.SetBool("ForwardMovement", true);
+                        } 
         }
         else
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed * inputV);
             anim.SetBool("ForwardMovement", false);
         }
 
         float inputH = Input.GetAxis("Horizontal");
+
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed * inputH);
+
+        
     }
 
     void Update()
