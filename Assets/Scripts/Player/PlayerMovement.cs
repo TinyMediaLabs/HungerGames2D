@@ -25,18 +25,18 @@ public class PlayerMovement : MonoBehaviour {
         float inputV = Input.GetAxis("Vertical");
         if(inputV > 0)
         {
-            GetComponent<Rigidbody2D>().AddForce(gameObject.transform.up * speed * inputV);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed * inputV);
 
             anim.SetBool("ForwardMovement", true);
         }
         else
         {
-            GetComponent<Rigidbody2D>().AddForce(gameObject.transform.up * speed * inputV);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed * inputV);
             anim.SetBool("ForwardMovement", false);
         }
 
         float inputH = Input.GetAxis("Horizontal");
-        GetComponent<Rigidbody2D>().AddForce(gameObject.transform.right * speed * inputH);
+        GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed * inputH);
     }
 
     void Update()

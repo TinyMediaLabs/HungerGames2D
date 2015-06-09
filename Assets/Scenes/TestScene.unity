@@ -124,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426710, guid: a88a986b05bb65041a295d3400666d8c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a88a986b05bb65041a295d3400666d8c, type: 2}
@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1032012608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,10 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d517ca582484e47afae0ce121bbf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMargin: .119999997
-  yMargin: .119999997
-  xSmooth: 3
-  ySmooth: 3
+  xMargin: 0
+  yMargin: 0
+  xSmooth: 10
+  ySmooth: 10
   maxXAndY: {x: 100, y: 100}
   minXAndY: {x: -100, y: -100}
   playerObject: {fileID: 2090378859}

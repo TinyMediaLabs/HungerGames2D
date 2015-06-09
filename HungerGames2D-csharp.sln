@@ -1,7 +1,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{F0AA8122-0673-EF72-BA13-7B341463041D}") = "HungerGames2D", "Assembly-CSharp-firstpass-vs.csproj", "{ABCDC225-0F55-6124-3A16-EEA8FD38E2AF}"
+EndProject
 Project("{F0AA8122-0673-EF72-BA13-7B341463041D}") = "HungerGames2D", "Assembly-CSharp-vs.csproj", "{A8CFEB10-203F-44B9-F914-20C970DA1C28}"
+EndProject
+Project("{F0AA8122-0673-EF72-BA13-7B341463041D}") = "HungerGames2D", "Assembly-CSharp-Editor-vs.csproj", "{6AC781F8-39CD-3741-FF24-6E5B875F9C7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCDC225-0F55-6124-3A16-EEA8FD38E2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCDC225-0F55-6124-3A16-EEA8FD38E2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCDC225-0F55-6124-3A16-EEA8FD38E2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCDC225-0F55-6124-3A16-EEA8FD38E2AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8CFEB10-203F-44B9-F914-20C970DA1C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8CFEB10-203F-44B9-F914-20C970DA1C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8CFEB10-203F-44B9-F914-20C970DA1C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8CFEB10-203F-44B9-F914-20C970DA1C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC781F8-39CD-3741-FF24-6E5B875F9C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC781F8-39CD-3741-FF24-6E5B875F9C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC781F8-39CD-3741-FF24-6E5B875F9C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC781F8-39CD-3741-FF24-6E5B875F9C7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																		GlobalSection(MonoDevelopProperties) = preSolution
+																					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
