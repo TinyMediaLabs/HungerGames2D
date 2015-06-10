@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     public float speed;
 
@@ -14,6 +15,9 @@ public class PlayerMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        Rotation By Mouse Position
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Quaternion rot = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
@@ -24,9 +28,11 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 CurrentRotation = transform.rotation.eulerAngles;
 
         GetComponent<Rigidbody2D>().angularVelocity = 0;
-
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        Body Movement
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
         float inputV = Input.GetAxis("Vertical");
-        if((inputV > 0) || (inputV < 0))
+        if ((inputV > 0) || (inputV < 0))
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed * inputV);
 
@@ -35,18 +41,18 @@ public class PlayerMovement : MonoBehaviour {
                 anim.SetBool("ForwardMovement", true);
             }
             else if ((CurrentRotation.z >= 150) && (CurrentRotation.z <= 210))
-                 {
-                    anim.SetBool("ForwardMovement", true);
-                 }
-                else if ((CurrentRotation.z > 30) && (CurrentRotation.z < 150))
-                    {
-                        anim.SetBool("ForwardMovement", true);
-  
-                    }
-                    else if ((CurrentRotation.z > 210) && (CurrentRotation.z < 330))
-                        {
-                            anim.SetBool("ForwardMovement", true);
-                        } 
+            {
+                anim.SetBool("ForwardMovement", true);
+            }
+            else if ((CurrentRotation.z > 30) && (CurrentRotation.z < 150))
+            {
+                anim.SetBool("ForwardMovement", true);
+
+            }
+            else if ((CurrentRotation.z > 210) && (CurrentRotation.z < 330))
+            {
+                anim.SetBool("ForwardMovement", true);
+            }
         }
         else
         {
@@ -56,8 +62,6 @@ public class PlayerMovement : MonoBehaviour {
         float inputH = Input.GetAxis("Horizontal");
 
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed * inputH);
-
-        
     }
 
     void Update()
